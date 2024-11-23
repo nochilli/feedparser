@@ -1,3 +1,4 @@
+webhook = "https://discord.com/api/webhooks/1309924781067468873/zVB3GtFkN5o00sANZ38BTaxtcZHu2Eehy2H3jZdTf-5DtOQuII9Wze4naNJEPyeMpM_G";
 whitelist = (
     "orb:",
     "dan da dan",
@@ -18,7 +19,6 @@ whitelist = (
     "ranma"
 );
 username = "Episode Update";
-webhook = "https://discord.com/api/webhooks/1309924781067468873/zVB3GtFkN5o00sANZ38BTaxtcZHu2Eehy2H3jZdTf-5DtOQuII9Wze4naNJEPyeMpM_G";
 avatar_url = (
     "https://source.android.com/static/docs/setup/images/Android_symbol_green_RGB.png"
 );
