@@ -15,7 +15,8 @@
 "gun gale",
 "talker",
 "demon", 
-"ranma"
+"ranma",
+"let this"
 );
 "Episode Update";
 "https://discord.com/api/webhooks/1309924781067468873/zVB3GtFkN5o00sANZ38BTaxtcZHu2Eehy2H3jZdTf-5DtOQuII9Wze4naNJEPyeMpM_G";
