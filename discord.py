@@ -1,8 +1,6 @@
 import requests
-import settings
 
-
-settings_url = ""
+settings_url = "https://raw.githubusercontent.com/nochilli/feedparser/refs/heads/main/settings.py"
 
 class discord:
     def __init__(self, webhook, username, avatar_url, feed):
@@ -14,21 +12,22 @@ class discord:
     def init_settings(source):
         global webhook, whitelist, username, avatar_url, feed_url
         if (source == "online"):
-            r = requests.get(settings_url).text
-            webhook = r.webhook;
-            whitelist = r.whitelist;
-            username = r.username;
-            avatar_url = r.avatar_url;
-            feed_url = r.feed_url;
+            r = requests.get(settings_url).text.split(";")
+            whitelist = eval(r[0])
+            username = r[1]
+            webhook = r[2]
+            avatar_url = r[3]
+            feed_url = r[4]
             
         else:
+            import settings
             webhook = settings.webhook
             whitelist = settings.whitelist
             username = settings.username
             avatar_url = settings.avatar_url
             feed_url = settings.feed_url
             
-            return webhook, whitelist, username, avatar_url, feed_url
+        return webhook, whitelist, username, avatar_url, feed_url
 
     def prepare_and_notify(self):
         for entry in self.feed.entries:
